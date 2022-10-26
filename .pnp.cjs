@@ -158,7 +158,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.0.1"],\
             ["json-schema-to-typescript", "npm:10.1.5"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.78.1"],\
+            ["rollup", "npm:3.2.3"],\
             ["rollup-plugin-dts", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:4.2.2"],\
             ["ts-node", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:10.9.1"],\
             ["tslib", "npm:2.4.0"],\
@@ -176,7 +176,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-node-resolve", "virtual:ab917ed25483d4697ceb0e52882c08cf6979143f94d86fe9b71dcaa5ecb555bdc3699a74208e57c77ba923cd0046347c1f5b3265feee6f12297ec3c7b3c8cfef#npm:13.3.0"],\
             ["@rollup/plugin-typescript", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:8.4.0"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rollup", "npm:2.78.1"],\
+            ["rollup", "npm:3.2.3"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
@@ -251,7 +251,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-builtin-module", "npm:3.1.0"],\
             ["is-module", "npm:1.0.0"],\
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],\
-            ["rollup", "npm:2.78.1"]\
+            ["rollup", "npm:3.2.3"]\
           ],\
           "packagePeers": [\
             "@types/rollup",\
@@ -277,7 +277,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/tslib", null],\
             ["@types/typescript", null],\
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],\
-            ["rollup", "npm:2.78.1"],\
+            ["rollup", "npm:3.2.3"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
@@ -308,7 +308,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rollup", null],\
             ["estree-walker", "npm:1.0.1"],\
             ["picomatch", "npm:2.3.0"],\
-            ["rollup", "npm:2.78.1"]\
+            ["rollup", "npm:3.2.3"]\
           ],\
           "packagePeers": [\
             "@types/rollup",\
@@ -859,7 +859,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }],\
         ["npm:0.10.61", {\
-          "packageLocation": "./.yarn/unplugged/es5-ext-npm-0.10.61-53173b2421/node_modules/es5-ext/",\
+          "packageLocation": "./.yarn/cache/es5-ext-npm-0.10.61-53173b2421-2f2034e91e.zip/node_modules/es5-ext/",\
           "packageDependencies": [\
             ["es5-ext", "npm:0.10.61"],\
             ["es6-iterator", "npm:2.0.3"],\
@@ -1792,10 +1792,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["rollup", [\
-        ["npm:2.78.1", {\
-          "packageLocation": "./.yarn/cache/rollup-npm-2.78.1-25ffe2a567-9034814383.zip/node_modules/rollup/",\
+        ["npm:3.2.3", {\
+          "packageLocation": "./.yarn/cache/rollup-npm-3.2.3-da5a5e4969-e4b4f3b70f.zip/node_modules/rollup/",\
           "packageDependencies": [\
-            ["rollup", "npm:2.78.1"],\
+            ["rollup", "npm:3.2.3"],\
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"]\
           ],\
           "linkType": "HARD"\
@@ -1817,7 +1817,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rollup", null],\
             ["@types/typescript", null],\
             ["magic-string", "npm:0.26.2"],\
-            ["rollup", "npm:2.78.1"],\
+            ["rollup", "npm:3.2.3"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "packagePeers": [\
