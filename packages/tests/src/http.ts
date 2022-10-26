@@ -2,7 +2,6 @@ import {
   GenericLogic,
   Logic,
   LoggingAgent,
-  Http,
   HttpAgent,
   RailwayError,
   SessionStorageAgent,
@@ -18,95 +17,126 @@ export class TestHttp extends GenericLogic {
     await this.testHttpPut();
     await this.testHttpPatch();
     await this.testHttpDelete();
+
+    LoggingAgent.info("complete TestHttp");
   }
 
   async handleError(error: RailwayError) {
-    LoggingAgent.error(`${error}`);
+    LoggingAgent.error(`${error.stack}`);
   }
 
   async testHttpGet() {
     const httpAgent = await HttpAgent?.acquire("test-http-server")!;
 
-    let resp = await httpAgent.get("/resource", {}, Http.ContentType.Json)!;
+    const resp = await httpAgent.fetch("/resource")!;
 
-    await SessionStorageAgent.putJson("GET.status", resp.status as Number);
-    await SessionStorageAgent.putJson("GET.headers", resp.headers);
-    await SessionStorageAgent.putByteArray("GET.body", resp.body);
+    let headers: Record<string, string> = {};
+    for (let [key, value] of resp.headers) {
+      headers[key] = value;
+    }
+
+    await SessionStorageAgent.putJson("GET.status", resp.status);
+    await SessionStorageAgent.putJson("GET.headers", headers);
+    await SessionStorageAgent.putByteArray("GET.body", await resp.text());
   }
 
   async testHttpPost() {
     const httpAgent = await HttpAgent?.acquire("test-http-server")!;
 
-    const resp = await httpAgent.post(
+    const resp = await httpAgent.fetch(
       "/resource",
       {
-        "content-type": "application/json",
-      },
-      Http.ContentType.Json,
-      new Uint8Array([123, 34, 97, 34, 58, 51, 51, 125])
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: new Uint8Array([123, 34, 97, 34, 58, 51, 51, 125])
+      }      
     )!;
 
-    await SessionStorageAgent.putJson("POST.status", resp.status as number);
-    await SessionStorageAgent.putJson("POST.headers", resp.headers);
-    await SessionStorageAgent.putByteArray("POST.body", resp.body);
+    let headers: Record<string, string> = {};
+    for (let [key, value] of resp.headers) {
+      headers[key] = value;
+    }
+
+    await SessionStorageAgent.putJson("POST.status", resp.status);
+    await SessionStorageAgent.putJson("POST.headers", headers);
+    await SessionStorageAgent.putByteArray("POST.body", await resp.text());
   }
 
   async testHttpPut() {
     const httpAgent = await HttpAgent?.acquire("test-http-server")!;
 
-    const resp = await httpAgent.put(
+    const resp = await httpAgent.fetch(
       "/resource/1",
       {
-        "content-type": "application/json",
-      },
-      Http.ContentType.Json,
-      new Uint8Array([
-        123, 34, 100, 97, 116, 97, 49, 34, 58, 34, 112, 117, 116, 32, 109, 111,
-        99, 107, 32, 100, 97, 116, 97, 49, 34, 44, 34, 100, 97, 116, 97, 50, 34,
-        58, 34, 112, 117, 116, 32, 109, 111, 99, 107, 32, 100, 97, 116, 97, 50,
-        34, 125,
-      ])
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: new Uint8Array([
+          123, 34, 100, 97, 116, 97, 49, 34, 58, 34, 112, 117, 116, 32, 109, 111,
+          99, 107, 32, 100, 97, 116, 97, 49, 34, 44, 34, 100, 97, 116, 97, 50, 34,
+          58, 34, 112, 117, 116, 32, 109, 111, 99, 107, 32, 100, 97, 116, 97, 50,
+          34, 125,
+        ])
+      }
     )!;
 
-    await SessionStorageAgent.putJson("PUT.status", resp.status as number);
-    await SessionStorageAgent.putJson("PUT.headers", resp.headers);
-    await SessionStorageAgent.putByteArray("PUT.body", resp.body);
+    let headers: Record<string, string> = {};
+    for (let [key, value] of resp.headers) {
+      headers[key] = value;
+    }
+
+    await SessionStorageAgent.putJson("PUT.status", resp.status);
+    await SessionStorageAgent.putJson("PUT.headers", headers);
+    await SessionStorageAgent.putJson("PUT.body", await resp.json());
   }
 
   async testHttpPatch() {
     const httpAgent = await HttpAgent?.acquire("test-http-server")!;
 
-    const resp = await httpAgent.patch(
+    const resp = await httpAgent.fetch(
       "/resource/1",
       {
-        "content-type": "application/json",
-      },
-      Http.ContentType.Json,
-      new Uint8Array([
-        123, 34, 100, 97, 116, 97, 49, 34, 58, 34, 112, 117, 116, 32, 109, 111,
-        99, 107, 32, 100, 97, 116, 97, 49, 34, 125,
-      ])
+        method: 'PATCH',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: '{"data1":"put mock data1"}'
+      }
     )!;
 
-    await SessionStorageAgent.putJson("PATCH.status", resp.status as number);
-    await SessionStorageAgent.putJson("PATCH.headers", resp.headers);
-    await SessionStorageAgent.putByteArray("PATCH.body", resp.body);
+    let headers: Record<string, string> = {};
+    for (let [key, value] of resp.headers) {
+      headers[key] = value;
+    }
+
+    await SessionStorageAgent.putJson("PATCH.status", resp.status);
+    await SessionStorageAgent.putJson("PATCH.headers", headers);
+    await SessionStorageAgent.putByteArray("PATCH.body", await resp.text());
   }
 
   async testHttpDelete() {
     const httpAgent = await HttpAgent?.acquire("test-http-server")!;
 
-    const resp = await httpAgent.delete(
+    const resp = await httpAgent.fetch(
       "/resource/1",
       {
-        "content-type": "application/json",
-      },
-      Http.ContentType.Json,
-      new Uint8Array()
+        method: 'DELETE',
+        headers: {
+          'content-type': 'application/json'
+        }
+      }
     )!;
 
-    await SessionStorageAgent.putJson("DELETE.status", resp.status as number);
-    await SessionStorageAgent.putJson("DELETE.headers", resp.headers);
-    await SessionStorageAgent.putByteArray("DELETE.body", resp.body);
+    let headers: Record<string, string> = {};
+    for (let [key, value] of resp.headers) {
+      headers[key] = value;
+    }
+
+    await SessionStorageAgent.putJson("DELETE.status", resp.status);
+    await SessionStorageAgent.putJson("DELETE.headers", headers);
+    await SessionStorageAgent.putByteArray("DELETE.body", await resp.text());
   }
 }
