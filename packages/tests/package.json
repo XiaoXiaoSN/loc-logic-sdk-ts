@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@fstnetwork/logic": "workspace:*",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^8.4.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.78.1",
