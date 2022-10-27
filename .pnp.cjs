@@ -53,7 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.0.1"],\
+            ["@types/node", "npm:18.11.7"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
@@ -143,7 +143,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@fstnetwork/root", "workspace:."],\
-            ["@types/node", "npm:18.0.1"],\
+            ["@types/node", "npm:18.11.7"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
@@ -155,7 +155,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@fstnetwork/runtime", "workspace:packages/runtime"],\
             ["@rollup/plugin-typescript", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:8.4.0"],\
-            ["@types/node", "npm:18.0.1"],\
+            ["@types/node", "npm:18.11.7"],\
             ["json-schema-to-typescript", "npm:10.1.5"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:2.78.1"],\
@@ -417,10 +417,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.0.1", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.0.1-35e22b3e26-be14b251c5.zip/node_modules/@types/node/",\
+        ["npm:18.11.7", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.7-0cf2ce3a09-69d630825c.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.0.1"]\
+            ["@types/node", "npm:18.11.7"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -859,7 +859,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }],\
         ["npm:0.10.61", {\
-          "packageLocation": "./.yarn/unplugged/es5-ext-npm-0.10.61-53173b2421/node_modules/es5-ext/",\
+          "packageLocation": "./.yarn/cache/es5-ext-npm-0.10.61-53173b2421-2f2034e91e.zip/node_modules/es5-ext/",\
           "packageDependencies": [\
             ["es5-ext", "npm:0.10.61"],\
             ["es6-iterator", "npm:2.0.3"],\
@@ -2050,7 +2050,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.9"],\
             ["@tsconfig/node14", "npm:1.0.1"],\
             ["@tsconfig/node16", "npm:1.0.2"],\
-            ["@types/node", "npm:18.0.1"],\
+            ["@types/node", "npm:18.11.7"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
