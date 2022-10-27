@@ -271,6 +271,11 @@ interface RequestInit {
    * Can only be null. Used to disassociate request from any Window.
    */
   window?: any;
+  /**
+   * A custom field `acceptInvalidCerts` to allow HttpAgent using accept
+   * invalid certs.
+   */
+   acceptInvalidCerts?: boolean;
 }
 
 /** This Fetch API interface represents a resource request.

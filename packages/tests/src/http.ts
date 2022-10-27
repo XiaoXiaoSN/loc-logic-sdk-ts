@@ -50,6 +50,7 @@ export default class TestHttp extends GenericLogic {
       method: 'POST',
       headers: myHeaders,
       body: new Uint8Array([123, 34, 97, 34, 58, 51, 51, 125]),
+      acceptInvalidCerts: true,
     });
 
     const headers: Record<string, string> = {};
@@ -71,6 +72,7 @@ export default class TestHttp extends GenericLogic {
         'content-type': 'application/json',
       },
       body: '{"data1":"put mock data1","data2":"put mock data2"}',
+      acceptInvalidCerts: true,
     });
     const resp = await httpAgent.fetch(request);
 
