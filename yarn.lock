@@ -78,7 +78,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fstnetwork/root@workspace:."
   dependencies:
-    "@types/node": ^18.0.1
+    "@types/node": ^18.11.15
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -88,7 +88,7 @@ __metadata:
   resolution: "@fstnetwork/runtime@workspace:packages/runtime"
   dependencies:
     "@rollup/plugin-typescript": ^8.4.0
-    "@types/node": ^18.0.1
+    "@types/node": ^18.11.15
     json-schema-to-typescript: ^10.1.5
     rimraf: ^3.0.2
     rollup: ^2.78.1
@@ -280,10 +280,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.0.1":
-  version: 18.0.1
-  resolution: "@types/node@npm:18.0.1"
-  checksum: be14b251c54cc2b4ca78ac6eadf2fe5e831e487f2e17848f21d576295945b538271dcc674d0bba582b3f8d95b84f6826e99b6ba4710c76f165a8bdd4d4f0618e
+"@types/node@npm:^18.11.15":
+  version: 18.11.15
+  resolution: "@types/node@npm:18.11.15"
+  checksum: cae8692a5cee0316f93ee0342237eb921f70c51afb37c661c711a925a4642654ae7e404c5a80899d481c0cfaff3a6891ef04bacd330a2e72734192bfc91dc2d8
   languageName: node
   linkType: hard
 
