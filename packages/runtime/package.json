@@ -1,6 +1,6 @@
 {
   "name": "@fstnetwork/runtime",
-  "version": "0.7.0-2",
+  "version": "0.8.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/fstnetwork/loc-logic-sdk-ts",

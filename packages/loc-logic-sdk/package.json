@@ -1,6 +1,6 @@
 {
   "name": "@fstnetwork/loc-logic-sdk",
-  "version": "0.7.0-2",
+  "version": "0.8.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/fstnetwork/loc-logic-sdk-ts",
@@ -14,8 +14,8 @@
     "clean": "rimraf target"
   },
   "dependencies": {
-    "@fstnetwork/logic": "workspace:0.7.0-2",
-    "@fstnetwork/runtime": "workspace:0.7.0-2"
+    "@fstnetwork/logic": "workspace:0.8.0",
+    "@fstnetwork/runtime": "workspace:0.8.0"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",

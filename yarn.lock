@@ -74,18 +74,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fstnetwork/loc-logic-sdk@workspace:packages/loc-logic-sdk"
   dependencies:
-    "@fstnetwork/logic": "workspace:0.7.0-2"
-    "@fstnetwork/runtime": "workspace:0.7.0-2"
+    "@fstnetwork/logic": "workspace:0.8.0"
+    "@fstnetwork/runtime": "workspace:0.8.0"
     rimraf: ^3.0.2
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
 
-"@fstnetwork/logic@workspace:*, @fstnetwork/logic@workspace:0.7.0-2, @fstnetwork/logic@workspace:packages/logic":
+"@fstnetwork/logic@workspace:*, @fstnetwork/logic@workspace:0.8.0, @fstnetwork/logic@workspace:packages/logic":
   version: 0.0.0-use.local
   resolution: "@fstnetwork/logic@workspace:packages/logic"
   dependencies:
-    "@fstnetwork/runtime": "workspace:0.7.0-2"
+    "@fstnetwork/runtime": "workspace:0.8.0"
     rimraf: ^3.0.2
     typescript: ^4.7.4
   languageName: unknown
@@ -115,7 +115,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fstnetwork/runtime@workspace:0.7.0-2, @fstnetwork/runtime@workspace:packages/runtime":
+"@fstnetwork/runtime@workspace:0.8.0, @fstnetwork/runtime@workspace:packages/runtime":
   version: 0.0.0-use.local
   resolution: "@fstnetwork/runtime@workspace:packages/runtime"
   dependencies:
