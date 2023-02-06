@@ -37,7 +37,7 @@ export class DatabaseClient {
       }
       const newRow: Row = {};
       for (let i = 0; i < results.columns.length; i++) {
-        const columnName = results?.columns[i]?.name;
+        const columnName = results.columns[i]?.name;
         if (columnName !== undefined) {
           // eslint-disable-next-line prefer-destructuring
           newRow[columnName] = Object.values(row[i])[0];
