@@ -2,6 +2,8 @@ name: Publish to NPM
 
 on:
   workflow_dispatch:
+  release:
+    types: [created]
 
 env:
   NODE_VERSION: 16
@@ -26,19 +28,33 @@ jobs:
         run: yarn install --immutable
 
       - name: publish @fstnetwork/runtime
+        id: publish-runtime
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: packages/runtime/package.json
+          dry-run: true
 
       - name: publish @fstnetwork/logic
+        id: publish-logic
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: packages/logic/package.json
+          dry-run: true
 
       - name: publish @fstnetwork/loc-logic-sdk
+        id: publish-loc-logic-sdk
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: packages/loc-logic-sdk/package.json
+          dry-run: true
+
+      - if: steps.publish-runtime.outputs.type != 'none'
+        run: |
+          echo "Version changed: ${{ steps.publish-runtime.outputs.old-version }} => ${{ steps.publish-runtime.outputs.version }}"
+
+      - if: steps.publish-runtime.outputs.type != 'none'
+        run: |
+          echo "[OUTPUT] Version changed: ${{ steps.publish-runtime.outputs.old-version }} => ${{ steps.publish-runtime.outputs.version }}" >> $GITHUB_OUTPUT
