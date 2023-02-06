@@ -153,7 +153,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fstnetwork/loc-logic-sdk", "workspace:packages/loc-logic-sdk"],\
             ["@fstnetwork/logic", "workspace:packages/logic"],\
             ["@fstnetwork/runtime", "workspace:packages/runtime"],\
-            ["rimraf", "npm:3.0.2"],\
+            ["rimraf", "npm:4.1.2"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
@@ -165,7 +165,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@fstnetwork/logic", "workspace:packages/logic"],\
             ["@fstnetwork/runtime", "workspace:packages/runtime"],\
-            ["rimraf", "npm:3.0.2"],\
+            ["rimraf", "npm:4.1.2"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
@@ -205,7 +205,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-typescript", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:9.0.2"],\
             ["@types/node", "npm:18.11.9"],\
             ["json-schema-to-typescript", "npm:10.1.5"],\
-            ["rimraf", "npm:3.0.2"],\
+            ["rimraf", "npm:4.1.2"],\
             ["rollup", "npm:3.2.5"],\
             ["rollup-plugin-dts", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:5.0.0"],\
             ["ts-node", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:10.9.1"],\
@@ -223,7 +223,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fstnetwork/logic", "workspace:packages/logic"],\
             ["@rollup/plugin-node-resolve", "virtual:ab917ed25483d4697ceb0e52882c08cf6979143f94d86fe9b71dcaa5ecb555bdc3699a74208e57c77ba923cd0046347c1f5b3265feee6f12297ec3c7b3c8cfef#npm:15.0.1"],\
             ["@rollup/plugin-typescript", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:9.0.2"],\
-            ["rimraf", "npm:3.0.2"],\
+            ["rimraf", "npm:4.1.2"],\
             ["rollup", "npm:3.2.5"],\
             ["tslib", "npm:2.4.1"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
@@ -3748,6 +3748,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["rimraf", "npm:3.0.2"],\
             ["glob", "npm:7.1.7"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.1.2", {\
+          "packageLocation": "./.yarn/cache/rimraf-npm-4.1.2-dd6c7bf72b-480b8147fd.zip/node_modules/rimraf/",\
+          "packageDependencies": [\
+            ["rimraf", "npm:4.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
