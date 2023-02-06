@@ -33,7 +33,7 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: packages/runtime/package.json
-          dry-run: true
+          # dry-run: true
 
       - name: publish @fstnetwork/logic
         id: publish-logic
@@ -41,7 +41,7 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: packages/logic/package.json
-          dry-run: true
+          # dry-run: true
 
       - name: publish @fstnetwork/loc-logic-sdk
         id: publish-loc-logic-sdk
@@ -49,12 +49,18 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: packages/loc-logic-sdk/package.json
-          dry-run: true
+          # dry-run: true
 
-      - if: steps.publish-runtime.outputs.type != 'none'
+      - name: Print publish summary
         run: |
-          echo "Version changed: ${{ steps.publish-runtime.outputs.old-version }} => ${{ steps.publish-runtime.outputs.version }}"
+          if [ ! -z "${{ steps.publish-runtime.outputs.version }}" ]; then
+            echo "Version changed: ${{ steps.publish-runtime.outputs.old-version }} => ${{ steps.publish-runtime.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+          fi
 
-      - if: steps.publish-runtime.outputs.type != 'none'
-        run: |
-          echo "[OUTPUT] Version changed: ${{ steps.publish-runtime.outputs.old-version }} => ${{ steps.publish-runtime.outputs.version }}" >> $GITHUB_OUTPUT
+          if [ ! -z "${{ steps.publish-logic.outputs.version }}" ]; then
+            echo "Version changed: ${{ steps.publish-logic.outputs.old-version }} => ${{ steps.publish-logic.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ ! -z "${{ steps.publish-loc-logic-sdk.outputs.version }}" ]; then
+            echo "Version changed: ${{ steps.publish-loc-logic-sdk.outputs.old-version }} => ${{ steps.publish-loc-logic-sdk.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+          fi
