@@ -1,0 +1,44 @@
+name: Publish to NPM
+
+on:
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 16
+
+jobs:
+  publish-npm:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: yarn
+
+      - name: Setup yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: publish @fstnetwork/runtime
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: packages/runtime/package.json
+
+      - name: publish @fstnetwork/logic
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: packages/logic/package.json
+
+      - name: publish @fstnetwork/loc-logic-sdk
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: packages/loc-logic-sdk/package.json

@@ -16,6 +16,7 @@ env:
   CI: 1
   CARGO_TERM_COLOR: always
   NIGHTLY_TOOLCHAIN: nightly-2022-04-13
+  NODE_VERSION: 16
 
 jobs:
   format:
@@ -35,7 +36,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Install nixpkgs-fmt
         run: |
@@ -83,13 +84,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      - name: Set up Node.js 16 with yarn caching
+      - name: Set up Node.js ${{ env.NODE_VERSION }} with yarn caching
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: ${{ env.NODE_VERSION }}
           cache: yarn
 
       - name: Setup yarn
