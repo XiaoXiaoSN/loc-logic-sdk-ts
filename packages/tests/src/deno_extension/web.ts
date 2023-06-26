@@ -40,18 +40,18 @@ export class TestWeb extends GenericLogic {
     );
     await this.context.agents.sessionStorage.putString("blob_type", blob.type);
 
-    let reader = new FileReader();
-    reader.addEventListener("loadend", async () => {
-      // reader.result contains the contents of blob as a typed array
-      let decoder = new TextDecoder();
-      let result = decoder.decode(reader.result);
+    // let reader = new FileReader();
+    // reader.addEventListener("loadend", async () => {
+    //   // reader.result contains the contents of blob as a typed array
+    //   let decoder = new TextDecoder();
+    //   let result = decoder.decode(reader.result);
 
-      await this.context.agents.sessionStorage.putString(
-        "fileReader_result",
-        result
-      );
-    });
-    reader.readAsArrayBuffer(blob);
+    //   await this.context.agents.sessionStorage.putString(
+    //     "fileReader_result",
+    //     result
+    //   );
+    // });
+    // reader.readAsArrayBuffer(blob);
   }
 
   async handleError(error: RailwayError) {
