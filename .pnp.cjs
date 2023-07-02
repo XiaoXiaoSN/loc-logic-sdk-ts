@@ -209,7 +209,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:3.2.5"],\
             ["rollup-plugin-dts", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:5.0.0"],\
             ["ts-node", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:10.9.1"],\
-            ["tslib", "npm:2.4.1"],\
+            ["tslib", "npm:2.6.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
@@ -225,7 +225,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-typescript", "virtual:c21ce1d9cd6d89c78470b6c4e4c8eb3c63e89575be5e5a2bf6d6c4e4ac9b28bb76e26414b0632ae1aa987918ea27ecfccddd3f686ae66fad9f3c686b5b6c28b3#npm:9.0.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["rollup", "npm:3.2.5"],\
-            ["tslib", "npm:2.4.1"],\
+            ["tslib", "npm:2.6.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
@@ -387,7 +387,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/typescript", null],\
             ["resolve", "patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"],\
             ["rollup", "npm:3.2.5"],\
-            ["tslib", "npm:2.4.1"],\
+            ["tslib", "npm:2.6.0"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "packagePeers": [\
@@ -4228,10 +4228,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:2.4.1", {\
-          "packageLocation": "./.yarn/cache/tslib-npm-2.4.1-36f0ed04db-19480d6e03.zip/node_modules/tslib/",\
+        ["npm:2.6.0", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.6.0-4d336a6824-c01066038f.zip/node_modules/tslib/",\
           "packageDependencies": [\
-            ["tslib", "npm:2.4.1"]\
+            ["tslib", "npm:2.6.0"]\
           ],\
           "linkType": "HARD"\
         }]\

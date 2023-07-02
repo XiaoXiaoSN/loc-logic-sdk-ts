@@ -126,7 +126,7 @@ __metadata:
     rollup: ^3.2.5
     rollup-plugin-dts: ^5.0.0
     ts-node: ^10.9.1
-    tslib: ^2.4.1
+    tslib: ^2.6.0
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -140,7 +140,7 @@ __metadata:
     "@rollup/plugin-typescript": ^9.0.2
     rimraf: ^3.0.2
     rollup: ^3.2.5
-    tslib: ^2.4.1
+    tslib: ^2.6.0
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -3417,10 +3417,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "tslib@npm:2.4.1"
-  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
+"tslib@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "tslib@npm:2.6.0"
+  checksum: c01066038f950016a18106ddeca4649b4d76caa76ec5a31e2a26e10586a59fceb4ee45e96719bf6c715648e7c14085a81fee5c62f7e9ebee68e77a5396e5538f
   languageName: node
   linkType: hard
 
