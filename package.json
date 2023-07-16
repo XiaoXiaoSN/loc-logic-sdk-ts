@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^8",
-    "@types/node": "^18.11.9",
+    "@types/node": "^20.4.2",
     "@types/prettier": "^2",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
