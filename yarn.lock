@@ -119,7 +119,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fstnetwork/runtime@workspace:packages/runtime"
   dependencies:
-    "@rollup/plugin-typescript": ^9.0.2
+    "@rollup/plugin-typescript": ^11.1.3
     "@types/node": ^18.11.9
     json-schema-to-typescript: ^10.1.5
     rimraf: ^3.0.2
@@ -137,7 +137,7 @@ __metadata:
   dependencies:
     "@fstnetwork/logic": "workspace:*"
     "@rollup/plugin-node-resolve": ^15.0.1
-    "@rollup/plugin-typescript": ^9.0.2
+    "@rollup/plugin-typescript": ^11.1.3
     rimraf: ^3.0.2
     rollup: ^3.2.5
     tslib: ^2.4.1
@@ -257,9 +257,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-typescript@npm:^9.0.2":
-  version: 9.0.2
-  resolution: "@rollup/plugin-typescript@npm:9.0.2"
+"@rollup/plugin-typescript@npm:^11.1.3":
+  version: 11.1.3
+  resolution: "@rollup/plugin-typescript@npm:11.1.3"
   dependencies:
     "@rollup/pluginutils": ^5.0.1
     resolve: ^1.22.1
@@ -272,7 +272,7 @@ __metadata:
       optional: true
     tslib:
       optional: true
-  checksum: 0b3a15e7402a8cf46a491003a0bfe6bf50294939133cf898c1dee0b9f1f8f4742242e81abd15effd8de2e9f3fe5fd81d01a03020341e1d3d0b7f4c6be21d989f
+  checksum: cde5475d16fb201bc6755eb676e72136591e9d4996b566ca702ab37870ba2554ba96a7cdacf4cd4b75ab004ae0d9fb4b32da014d3fae1d41c9bb783a843551f1
   languageName: node
   linkType: hard
 
